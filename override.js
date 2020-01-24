@@ -16,3 +16,9 @@ console.log(
 `,
   "font-family:monospace"
 )
+
+while (true) {
+  let promoted = document.evaluate("//span[contains(., 'Promoted')]", document, null, XPathResult.ANY_TYPE, null);
+  let thisPromoted = promoted.iterateNext();
+  thisPromoted.closest('article').remove();
+}
